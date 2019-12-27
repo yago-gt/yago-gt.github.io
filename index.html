@@ -23,7 +23,7 @@
 				$("#contactTitle").text(textData.contact);
 				$("#sitesText").text(textData.sites);
 				$("#dummybirdDesc").text("");
-				$("#dummybirdDesc").append("This project was the first full game that I did. The game is a clone of the mobile game <strong>Flappy Bird</strong> using the <strong>LÖVE</strong> framework with the <strong>Lua</strong> scripting language. It uses <strong>object oriented programming</strong> to model in-game object like the bird, sky and the pipes. The game is free to download in Itch.io and the source code can be found in GitHub.");
+				$("#dummybirdDesc").append(textData.dummybirdDesc);
 				$("#dummybirdDesc").append(" (<a href='#contact'>" + textData.seeContact + "</a>)");
 				$("#resumePDF").attr("src", RESUMEPATH + LANGNAME + RESUMEFORMAT);
 			});

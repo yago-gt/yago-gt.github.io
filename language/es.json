@@ -6,6 +6,6 @@
     "contact": "contacto",
     "design": "diseño",
     "sites": "sitios web: ",
-    "dummybirdDesc": "",
+    "dummybirdDesc": "Este proyecto fue mi primer video juego completo. El juego es un clon de juego de celular <strong>Flappy Bird</strong> hecho con el framework <strong>LÖVE</strong> y el lenguage de scripting <strong>Lua</strong>. Usa <strong>programación orientada a objetos</strong> para modelar elementos del juego como el pájaro, el cielo y las tuberías. El juego es gratuito para descargar en Itch.io y el codigo se puede encontrar en GitHub. ",
     "seeContact": "ver links en contacto"
 }
