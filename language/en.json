@@ -1,0 +1,11 @@
+{
+    "title": "Yago's Portfolio",
+    "undertitle": "Software & Game Developer",
+    "projects": "projects",
+    "resume": "resumé",
+    "contact": "contact",
+    "design": "design",
+    "sites": "sites: ",
+    "dummybirdDesc": "This project was the first full game that I did. The game is a clone of the mobile game <strong>Flappy Bird</strong> using the <strong>LÖVE</strong> framework with the <strong>Lua</strong> scripting language. It uses <strong>object oriented programming</strong> to model in-game object like the bird, sky and the pipes. The game is free to download in Itch.io and the source code can be found in GitHub.",
+    "seeContact": "see conctact"
+}
