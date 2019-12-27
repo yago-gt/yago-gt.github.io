@@ -1,1 +1,144 @@
-Hello World
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+-->
+<html>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		const LANGPATH = "https://yago-gt.github.io/language/";
+		const LANGFORMAT = ".json";
+		var RESUMEPATH = "files/Yago Tassello CV 32-";
+		var RESUMEFORMAT = ".pdf";
+
+		function setLanguage(LANGNAME) {
+			$.getJSON(LANGPATH + LANGNAME + LANGFORMAT, function(textData) {
+				$("#projectsText").text(textData.projects);
+				$("#projectsTitle").text(textData.projects);
+				$("#titleText").text(textData.title);
+				$("#undertitleText").text(textData.undertitle);
+				$("#resumeText").text(textData.resume);
+				$("#resumeTitle").text(textData.resume);
+				$("#contactText").text(textData.contact);
+				$("#contactTitle").text(textData.contact);
+				$("#sitesText").text(textData.sites);
+				$("#dummybirdDesc").text("");
+				$("#dummybirdDesc").append("This project was the first full game that I did. The game is a clone of the mobile game <strong>Flappy Bird</strong> using the <strong>LÖVE</strong> framework with the <strong>Lua</strong> scripting language. It uses <strong>object oriented programming</strong> to model in-game object like the bird, sky and the pipes. The game is free to download in Itch.io and the source code can be found in GitHub.");
+				$("#dummybirdDesc").append(" (<a href='#contact'>" + textData.seeContact + "</a>)");
+				$("#resumePDF").attr("src", RESUMEPATH + LANGNAME + RESUMEFORMAT);
+			});
+		}
+
+		$(document).ready(function() {
+			setLanguage("en");
+    	});
+	</script>
+
+
+	<head>
+
+		<title>Yago's Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="content">
+							<div class="inner">
+								<h1 id="titleText">YAGO'S PORTFOLIO</h1>
+								<p id="undertitleText">Software & Game Developer</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a id="projectsText" href="#projects">Projects</a></li>
+								<li><a id="resumeText" href="#resume">Resumé</a></li>
+								<li><a id="contactText" href="#contact">Contact</a></li>
+                            </ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Resume -->
+							<article id="resume">
+								<h2 id="resumeTitle" class="major">Resume</h2>
+                                <embed id="resumePDF" src="files/Yago Tassello CV 32-en.pdf" type="application/pdf" width="100%" height="1120"/>
+							</article>
+
+						<!-- Projects -->
+							<article id="projects">
+								<h2 id="projectsTitle" class="major">Projects</h2>
+								<h3>Dummy Bird</h3>
+								<span class="image main"><img src="images/dummybird-cover.png" alt="" /></span>
+								<p id="dummybirdDesc">
+									This project was the first full game that I did. The game is a Flappy Bird clone made from scratch using the LÖVE framework with the LUA scripting language.
+									It uses object oriented programming to model in-game object like the bird, sky and the pipes. The game is free to download in Itch.io and the source code can be found in GitHub.
+								</p>
+							</article>
+
+						<!-- Contact -->
+							<article id="contact">
+								<h2 id="contactTitle" class="major">Contact</h2>
+								<section>
+									<h4>Email: </h4>
+									<ul class="actions-stacked">
+										<li><a href="mailto:ygtassello@gmail.com">ygtassello@gmail.com</a></li>
+									</ul>
+
+									<h4>Cel: </h4>
+									<ul class="actions-stacked">
+										<li><a href="tel:11952820546">11 95282-0546</a></li>
+									</ul>
+
+									<h4>Tel: </h4>
+									<ul class="actions-stacked">
+										<li><a href="tel:1123075723">11 2307-5723</a></li>
+									</ul>
+
+
+									<h4 id="sitesText">Sites: </h4>
+									<ul class="icons">
+										<li><a href="https://www.github.com/yago-gt" class="icon brands fa-github"><span class="label"></span></a></li>
+										<li>GitHub</li>
+										<li><a href="https://www.linkedin.com/in/yago-tassello-48ab44191/" class="icon brands fa-linkedin"><span class="label"></span></a></li>
+										<li>Linkedin</li>
+										<li><a href="https://yagogt.itch.io" class="fa fa-gamepad"><span class="label"></span></a></li>
+										<li>Itch.io</li>
+
+								</section>
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">Design: <a href="https://html5up.net">HTML5 UP</a><br>
+							<a href="#" onclick="setLanguage('en')">English</a>
+							<a href="#" onclick="setLanguage('es')">Español</a>
+							<a href="#" onclick="setLanguage('pt')">Português</a>
+							</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
